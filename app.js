@@ -5,6 +5,7 @@ const server = http.createServer((req, res)=>{
   //  * 그러나 습관상, 바로 브랜치를 만들도록 합니다.
   res.writeHead(200, {"Content-Type" : "text/plain"})
   res.write("향마루");
+  res.end();
 });
 
 server.listen(3500);
