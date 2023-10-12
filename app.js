@@ -1,17 +1,11 @@
-console.log('hi');
-
 const http = require('http');
 
 const server = http.createServer((req, res)=>{
-
-  
+  // ! 이래나 저러나 써야하는 "골격"에 쓰는 것들은 메인에 쓰긴 합니다.
+  //  * 그러나 습관상, 바로 브랜치를 만들도록 합니다.
+  res.writeHead(200, {"Content-Type" : "text/plain"})
+  res.write("향마루");
+  res.end();
 });
 
-server.listen(3500, (err)=>{
-  if (!err){
-    console.error('서버 안 돌아감');
-  } else {
-    // ! 수퍼 꿀팁, 링크를 만들어 놓으면 눌러서 바로 넘어가면 테스트하기 편하다.
-    console.log('3500 포트에 돌아감 . http://localhost:3500');
-  }
-})
+server.listen(3500);
